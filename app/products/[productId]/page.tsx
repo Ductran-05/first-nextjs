@@ -1,4 +1,9 @@
 
+import { Metadata } from "next";
+
+export const generateMetadata = async ({ params }: ProductPageProps): Promise<Metadata> => ({
+    title: `Product ID: ${params.productId}`,
+})
 interface ProductPageProps {
     params: { productId: string }
 }
